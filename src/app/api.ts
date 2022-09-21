@@ -1,11 +1,11 @@
 export interface Product {
-  id: string;
+  id?: string;
   name: string;
-  price: number;
-  description: string;
-  imageURL: string;
-  imageAlt: string;
-  imageCredit: string;
+  price?: number;
+  description?: string;
+  imageURL?: string;
+  imageAlt?: string;
+  imageCredit?: string;
 }
 
 export async function getProducts(): Promise<Product[]> {
@@ -33,5 +33,4 @@ export async function checkout(items: CartItems): Promise<CheckoutResponse> {
 }
 
 // utility function to simulate slowness in an API call
-const sleep = (time: number) =>
-  new Promise((res) => setTimeout(res, time));
+const sleep = (time: number) => new Promise((res) => setTimeout(res, time));

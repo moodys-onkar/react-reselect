@@ -11,7 +11,6 @@ const initialState: ProductsState = {
 
 const productsSlice = createSlice({
   initialState,
-  name: "products",
   reducers: {
     receivedProducts(state, action: PayloadAction<Product[]>) {
       const products = action.payload;
@@ -20,6 +19,7 @@ const productsSlice = createSlice({
       });
     },
   },
+  name: "products",
 });
 
 export const { receivedProducts } = productsSlice.actions;
